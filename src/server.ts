@@ -1,10 +1,10 @@
 import fastify from "fastify";
 
+import { notesRoutes } from "./routes/notes-routes.js";
+
 const app = fastify();
 
-app.get("/", () => {
-  return "Hello World!";
-});
+notesRoutes(app);
 
 app
   .listen({ port: 3333 })

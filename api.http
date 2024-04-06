@@ -1,1 +1,14 @@
-GET http://localhost:3333/
+GET http://localhost:3333/notes
+
+###
+
+POST http://localhost:3333/notes
+Content-Type: application/json
+
+{
+    "description": "Criando o controller e separando as rotas da aplicação 'notes-list'."
+}
+
+###
+
+DELETE http://localhost:3333/notes/66119745ff9d85086ac562f6

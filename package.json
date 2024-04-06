@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts"
   },
@@ -11,10 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.4",
+    "prisma": "^5.12.1",
     "tsx": "^4.7.2",
     "typescript": "^5.4.4"
   },
   "dependencies": {
-    "fastify": "^4.26.2"
+    "@prisma/client": "^5.12.1",
+    "fastify": "^4.26.2",
+    "zod": "^3.22.4"
   }
 }
