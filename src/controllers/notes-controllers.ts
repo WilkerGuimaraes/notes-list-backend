@@ -4,7 +4,11 @@ import { z } from "zod";
 import { prisma } from "../database/prisma-database.js";
 
 export async function getNotes() {
-  const notes = await prisma.notes.findMany();
+  const notes = await prisma.notes.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
   return notes;
 }
@@ -12,14 +16,14 @@ export async function getNotes() {
 export async function createNote(request: FastifyRequest, reply: FastifyReply) {
   try {
     const createNewNote = z.object({
-      description: z.string(),
+      content: z.string(),
     });
 
     const data = createNewNote.parse(request.body);
 
     const note = await prisma.notes.create({
       data: {
-        description: data.description,
+        content: data.content,
       },
     });
 

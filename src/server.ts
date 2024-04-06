@@ -1,8 +1,13 @@
 import fastify from "fastify";
+import fastifyCors from "@fastify/cors";
 
 import { notesRoutes } from "./routes/notes-routes.js";
 
 const app = fastify();
+app.register(fastifyCors, {
+  origin: "*",
+  methods: ["GET", "POST", "DELETE"],
+});
 
 notesRoutes(app);
 
