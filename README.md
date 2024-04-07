@@ -1,8 +1,8 @@
-# API da Lista de Anotações
+# API - Lista de Anotações
 
 ## 📃 Descrição
 
-Esta é uma API que serve para realizar a integração do projeto Front-end da "Lista de Anotações" com um banco de dados MongoDB. Sendo capaz de realizar rotas de leitura, criação e remoção de anotações.
+Esta é uma API que serve para realizar a integração do projeto Front-end "Lista de Anotações" com um banco de dados MongoDB. Sendo capaz de realizar rotas de leitura, criação e remoção de anotações.
 
 ## ⚙ Funcionamento
 
@@ -17,11 +17,11 @@ Esta é uma API que serve para realizar a integração do projeto Front-end da "
 
 ## 🧰 Recursos
 
-Este projeto utiliza algumas ferramentas de desenvolvimento back-end utilizando o Node.js:
+Este projeto utiliza algumas ferramentas de desenvolvimento back-end utilizando em conjunto com o Node.js:
 
-- `prisma`: o prisma é um ORM que foi utilizado para simplificar a interação com o banco de dados fornecendo uma interface amigável para consultas e manipulação de dados. Nesta API, o prisma foi utilizado para permitir a interação desta API com o MongoDB que é um banco de dados não relacional.
+- `prisma`: o prisma é um ORM que foi utilizado para simplificar a interação com o banco de dados fornecendo uma interface amigável para consultas e manipulação de dados. Nesta API, o prisma foi utilizado para permitir a interação com o MongoDB, que é um banco de dados não relacional.
 - `cors`(Cross-Origin Resource Sharing): é um mecanismo de segurança utilizado pelos navegadores para determinar se scripts de uma origem determinada têm permissão para acessar recursos de outra origem na web. Com isso o projeto Front-end conseguiu realizar as solicitações da API sem violar as políticas de segurança do navegador.
-- `zod`: o zod é uma biblioteca TypeScript de validação de esquemas (schema validation) e tipagem de dados. Com esta ferramenta, está aplicação foi desenvolvida aplicando regras de validação para verificar a tipagem dos dados enviados e recebidos por esta API em tempo de compilação para assim evitar erros de tipo tornando o código mais seguro.
+- `zod`: o zod é uma biblioteca TypeScript de validação de esquemas (schema validation) e tipagem de dados. Com esta ferramenta, está aplicação foi desenvolvida aplicando regras de validação para verificar a tipagem dos dados enviados e recebidos por esta API em tempo de compilação, para assim evitar erros de tipo tornando o código mais seguro.
 
 ## 💻 Executando
 
@@ -41,7 +41,7 @@ npx prisma init
 
 ```
 
-Com este comando, o prisma irá criar um arquivo de configuração de conexão e um arquivo `.env`, ao qual você irá precisar definir neste arquivo seu link de conexão ao banco de dados fornecido na sua conta no site do MongoDB. Ao copiar seu código de conexão, substitua o nome de usuário e senha com os seus dados seguindo as instruções do site do MongoDB.
+Com este comando, o prisma irá criar um arquivo de configuração de conexão e um arquivo `.env`. Neste arquivo `.env` você irá precisar definir neste arquivo seu link de conexão ao banco de dados fornecido na sua conta no site do MongoDB. Ao copiar seu código de conexão, substitua o nome de usuário e senha com os seus dados seguindo as instruções do site do MongoDB.
 
 Na pasta `prisma`, irá conter um arquivo com o nome de `schema.prisma`. Por padrão, este arquivo vem com esta configuração:
 
@@ -71,16 +71,16 @@ npm run db:migrate
 
 O servidor estará rodando na porta `3333` do seu navegador:`http://localhost:3333`
 
-Para ver esta API funcionando é recomendável utilizar em conjunto com o projeto Front-end da "Lista de Anotações". Acesse o seguinte link para mais informações: https://github.com/WilkerGuimaraes/notes-list-frontend
+Para ver esta API funcionando é recomendável utilizar em conjunto com o projeto Front-end "Lista de Anotações". Acesse o seguinte link para mais informações: https://github.com/WilkerGuimaraes/notes-list-frontend
 
-Porém, caso você queira testar esta API sem o Front-end, você pode utilizar o arquivo `api.http` localizado para pasta raiz do projeto. Neste arquivo contém as todas as requisições desta API, para utiliza-las siga as seguintes instruções:
+Porém, caso você queira testar esta API sem o Front-end, você pode utilizar o arquivo `api.http` localizado para pasta raiz do projeto. Neste arquivo contém as todas as requisições desta API, para utilizá-las siga as seguintes instruções:
 
 1. Baixe a extensão do VSCode chamada `Rest Client`
    ![rest-client-img](https://imgur.com/bFStodZ.png)
 
-2. Para utilizar a requisição POST, informe os dados da anotação como valor da propriedade `content`. Após a criação da nova nota, verifique o seu banco de dados para visualizar a anotação armazenada.
+2. Para utilizar a requisição POST, informe o conteúdo da anotação como valor da propriedade `content`. Após a criação da nova nota, verifique o seu banco de dados para visualizar a anotação armazenada.
 3. Para utilizar a requisição DELETE, você precisa informar no final da requisição, após `/notes/`, o valor do `id` da anotação ao qual você deseja deletar.
 
 ## 🙋‍♂️ Colaboradores
 
-Este projeto foi desenvolvido apenas por mim Wilker Guimarães, com o objetivo de desenvolver e aplicar os meus conhecimentos Back-end e utilizá-lo junto com uma aplicação Front-end.
+Este projeto foi desenvolvido apenas por mim Wilker Guimarães, com o objetivo de desenvolver e aplicar os meus conhecimentos Back-end e utilizá-lo em conjunto com uma aplicação Front-end.
