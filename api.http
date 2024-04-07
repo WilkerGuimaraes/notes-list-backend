@@ -7,7 +7,7 @@ POST http://localhost:3333/notes
 Content-Type: application/json
 
 {
-    "description": "NOVOOOOOOOOOOOOOOOOOOOOOO"
+    "content": "_Digite aqui o conteúdo da nova anotação e pressione o botão acima da requisição POST `Send Request`._"
 }
 
 ###
