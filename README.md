@@ -7,8 +7,8 @@ Esta é uma API que serve para realizar a integração do projeto Front-end "Lis
 ## ⚙ Funcionamento
 
 - O usuário pode adicionar uma nova nota.
-- Este nota será armazenado no banco de dados.
-- O projeto Front-end irá fazer uma requisição nesta API para que assim, os dados das notas sejam retornados do banco de dados.
+- Esta nota será armazenada no banco de dados.
+- O projeto Front-end irá fazer uma requisição nesta API, para que assim os dados das notas sejam retornados do banco de dados.
 - O usuário também poderá realizar uma requisição através da interface Front-end para deletar o produto do banco de dados e assim removê-lo da tela.
 
 ## 🛠 Tecnologias
@@ -17,7 +17,7 @@ Esta é uma API que serve para realizar a integração do projeto Front-end "Lis
 
 ## 🧰 Recursos
 
-Este projeto utiliza algumas ferramentas de desenvolvimento back-end utilizando em conjunto com o Node.js:
+Este projeto aborda o uso de algumas ferramentas de desenvolvimento back-end utilizado em conjunto com o Node.js:
 
 - `prisma`: o prisma é um ORM que foi utilizado para simplificar a interação com o banco de dados fornecendo uma interface amigável para consultas e manipulação de dados. Nesta API, o prisma foi utilizado para permitir a interação com o MongoDB, que é um banco de dados não relacional.
 - `cors`(Cross-Origin Resource Sharing): é um mecanismo de segurança utilizado pelos navegadores para determinar se scripts de uma origem determinada têm permissão para acessar recursos de outra origem na web. Com isso o projeto Front-end conseguiu realizar as solicitações da API sem violar as políticas de segurança do navegador.
@@ -73,7 +73,7 @@ O servidor estará rodando na porta `3333` do seu navegador:`http://localhost:33
 
 Para ver esta API funcionando é recomendável utilizar em conjunto com o projeto Front-end "Lista de Anotações". Acesse o seguinte link para mais informações: https://github.com/WilkerGuimaraes/notes-list-frontend
 
-Porém, caso você queira testar esta API sem o Front-end, você pode utilizar o arquivo `api.http` localizado para pasta raiz do projeto. Neste arquivo contém as todas as requisições desta API, para utilizá-las siga as seguintes instruções:
+Porém, caso você queira testar esta API sem o Front-end, você pode utilizar o arquivo `api.http` localizado para pasta raiz do projeto. Neste arquivo contém todas as requisições desta API, para utilizá-las siga as seguintes instruções:
 
 1. Baixe a extensão do VSCode chamada `Rest Client`
    ![rest-client-img](https://imgur.com/bFStodZ.png)
