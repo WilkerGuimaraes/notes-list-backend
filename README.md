@@ -25,7 +25,11 @@ Este projeto aborda o uso de algumas ferramentas de desenvolvimento back-end uti
 
 ## 💻 Executando
 
-- Após clonar o repositório, acesse a pasta do projeto e execute o seguinte comando para instalar todas as dependências:
+- Após clonar o repositório, crie um arquivo na raiz do seu projeto chamado `.env` e crie uma nova variável com o nome `DATABASE_URL=`. Logo após, defina neste arquivo seu link de conexão ao banco de dados fornecido na sua conta no site do MongoDB. Ao copiar seu código de conexão, substitua o nome de usuário e senha com os seus dados seguindo as instruções do site do MongoDB.
+
+![env_file](https://imgur.com/KZdhpbi.png)
+
+- Após isso, acesse a pasta do projeto e execute o seguinte comando para instalar todas as dependências:
 
 ```
 
@@ -33,39 +37,19 @@ npm install
 
 ```
 
-- Após isso, execute o seguinte comando para iniciar o prisma:
-
-```
-
-npx prisma init
-
-```
-
-Com este comando, o prisma irá criar um arquivo de configuração de conexão e um arquivo `.env`. Neste arquivo `.env` você irá precisar definir neste arquivo seu link de conexão ao banco de dados fornecido na sua conta no site do MongoDB. Ao copiar seu código de conexão, substitua o nome de usuário e senha com os seus dados seguindo as instruções do site do MongoDB.
-
-Na pasta `prisma`, irá conter um arquivo com o nome de `schema.prisma`. Por padrão, este arquivo vem com esta configuração:
-
-![prisma-code](https://imgur.com/7xc0sIX.png)
-
-Você precisa garantir que os dados estejam assim:
-
-![prisma-code2](https://imgur.com/RsYUi1k.png)
-
-Com esta configuração, você informa ao prisma que o banco de dados ao qual ele vai se conectar é o MongoDB. E também, este código contém a estrutura da tabela de anotações que será criada no banco de dados.
-
-- Depois de verificar se as configurações estão corretas, execute no terminal o seguinte script para rodar o servidor:
-
-```
-
-npm run dev
-
-```
-
-- E por fim, execute este script para que o prisma realize a conexão com o MongoDB.
+- Em seguida, execute este script para que o prisma realize a conexão com o MongoDB.
 
 ```
 
 npm run db:migrate
+
+```
+
+- Depois de verificar se as configurações estão corretas, execute no terminal o seguinte script para executar esta API:
+
+```
+
+npm run dev
 
 ```
 
