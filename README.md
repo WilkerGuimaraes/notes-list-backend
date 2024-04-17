@@ -29,7 +29,7 @@ Este projeto aborda o uso de algumas ferramentas de desenvolvimento back-end uti
 
 ![env_file](https://imgur.com/KZdhpbi.png)
 
-- Após isso, acesse a pasta do projeto e execute o seguinte comando para instalar todas as dependências:
+- Após isso, execute o seguinte comando para instalar todas as dependências:
 
 ```
 
